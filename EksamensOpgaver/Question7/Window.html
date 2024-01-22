@@ -1,0 +1,52 @@
+<script>
+//tjek drawio for at se flowchartet
+
+//What is the purpose of the window object in JavaScript?
+// det er det globale objekt i en browser og kan bruges til at manipulere browseren
+
+// i vores code, bruger alert og sessionStorage i adminadd
+
+
+
+var globalVariable = "Jeg er global";
+
+function globalFunction() {
+    console.log("Jeg er en global funktion");
+}
+
+console.log(window.globalVariable); // Adgang til global variabel
+window.globalFunction(); // Adgang til global funktion
+
+
+
+
+
+// Lytter efter vinduets indlæsning og udfører en funktion
+window.onload = function() { // dvs når vinduet er indlæst så udfører den funktionen
+    console.log("Vinduet er blevet indlæst");
+};
+
+
+
+// Udfører en funktion efter 2 sekunder
+window.setTimeout(function() {
+    console.log("Funktionen blev udført efter 2 sekunder");
+}, 2000);
+
+
+// window.history.back(); // Gå tilbage til forrige side
+// window.history.forward(); // Gå frem til næste side
+
+// // Åbner en ny fane med en given URL
+// window.open("https://www.dr.dk", "_blank"); // Åbner i en ny fane _blank eller i samme fane _self
+
+// // Navigerer til en anden side
+// window.location.href = "https://www.example.dk"; // Navigerer til en anden side
+
+// Ændrer tekstindholdet af et element med id'en "minElement"
+document.getElementById("minElement").innerHTML = "Ny tekst";
+
+// Skifter baggrundsfarven på hele dokumentet
+document.body.style.backgroundColor = "black";
+
+</script>

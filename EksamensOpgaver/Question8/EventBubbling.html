@@ -1,0 +1,40 @@
+<!-- // Dette er især nyttigt, når du har en liste med elementer, der hver især har en eventlytter,
+// Du kan lytte efter begivenheder på overordnede elementer i stedet
+//  for at skulle tilføje separate eventlyttere til hvert enkelt barn af det overordnede element.  -->
+
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <button id="myButton">Klik mig!</button>
+        </div>
+    </div>
+
+    <script>
+        // Håndterer klik-begivenhed på det ydre element
+        document.getElementById('outer').addEventListener('click', function() {
+            console.log('Klik på det ydre element');
+        });
+
+        // Håndterer klik-begivenhed på det indre element
+        document.getElementById('inner').addEventListener('click', function() {
+            console.log('Klik på det indre element');
+        });
+
+        // Håndterer klik-begivenhed på knappen
+        document.getElementById('myButton').addEventListener('click', function() {
+            console.log('Klik på knappen');
+        });
+
+
+        
+    </script>
+</body>
+
+
+
+<!-- // I dette eksempel, hvis jeg klikker på knappen med "myButton", vil konsollen vise:
+// Klik på knappen
+// Klik på det indre element
+// Klik på det ydre element -->
+

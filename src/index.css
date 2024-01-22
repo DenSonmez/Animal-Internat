@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*html {
+  padding:0; 
+  margin:0;
+}
+
+
+
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+  --navbar-padding: 10px;
+
+}
+body {
+  margin: 0;
+  padding: 0px;
+  font-family: "Poppins";
+  background: var(--secondary);
+  background-image: url(./assets/Background_0.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+* {
+  color: #fff;
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+.c
+{
+  margin: 50px 0;
+  
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+
+/* navbar */
+/* 
+*/
+.navHeader{
+  background-color: #2b3452;
+  padding-top: var(--navbar-padding);
+  padding-bottom: var(--navbar-padding);
+}
+
+header nav {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav h1 {
+  margin-right: auto;
+  border-bottom: 3px solid var(--primary);
+}
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+header nav a.active {
+  background: var(--primary);
+}
+.navIcon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
+.navIconRight {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  vertical-align: middle;
+
+  /* Medieforespørgsel for mindre skærme */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column; /* Ændrer retningen til kolonne på mindre skærme */
+  }
+
+  header nav h1 {
+    margin-right: 0; /* Fjerner højremargen for at centrere overskriften */
+    text-align: center; /* Centrerer teksten */
+  }
+
+  .navIcon,
+  .navIconRight {
+    margin: 0; /* Fjerner margener for ikoner på mindre skærme */
+  }
+}
+}
+/* contact form */
+
+.contact {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-bottom: auto;
+  text-align: center; /* Center the text */
+}
+
+form {
+  margin-top: 20px; /* Juster denne værdi efter behov for at ændre afstanden */
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form input,
+form label span,
+form textarea {
+  display: block;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px; /* Adjust the margin for better spacing */
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 300px;
+  color: var(--secondary);
+}
+
+form label span {
+  margin-bottom: 10px;
+}
+
+
+
+
+/* Style for the black-backgrounded textbox */
+.rounded-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  text-align: left;
+  margin: 20px auto;
+  min-width: 300px; /* Set a minimum width */
+  max-width: 600px; /* Set a maximum width if needed */
+}
+
+.small-box {
+  max-width: 600px;
+}
+
+.large-rounded-box{
+  min-width: 600px !important;
+  max-width: 1200px !important;
+}
+
+@media (max-width: 2px) {
+  .rounded-box,
+  .small-box,
+  .large-rounded-box {
+    width: 90%; /* Ændrer bredden til 90% af skærmens bredde på mindre skærme */
+    min-width: auto; /* Fjerner minimumsbredde på mindre skærme */
+    max-width: none; /* Fjerner maksimalbredde på mindre skærme */
+    margin: 20px auto; /* Justerer margener for bedre responsivitet */
+  }
+}
+
+/* Style for the "Show All Pets" button */
+.show-button {
+  background-color: #ff8000; /* Pumpkin orange */
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add this to your CSS stylesheet */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  padding: 6px;
+  text-decoration: none;
+  color: white;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  margin-left: 36px;
+  position: absolute;
+  background-color: #2b3452; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropbtn img {
+  vertical-align: middle;
+}
+
+.dropdown-content a {
+  color: white; 
+  padding: 6px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #bc4123; 
+  color: white; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.admin-add-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 1px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  color: #000; 
+  opacity: 1; 
+}
+
+option {
+  color: #000;
+}
+
+button {
+  padding: 10px;
+  background-color: #bc4123;;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  flex: 1;
+  text-align: left;
+  margin-right: 15px;
+}
+
+input {
+  flex: 2;
+  padding: 8px;
+  border-radius: 4px;
+  border: 0;
+  width: 100%;
+  color: var(--secondary);
+}
+
+
+
+.petContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+}
+
+.petBox {
+  flex: 0 0 200px; 
+  border: 1px solid #ccc; 
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  background-color: #2b3452; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.petImage {
+    width: 150px; /* Fast bredde for billeder */
+    height: 150px; /* Fast højde for billeder */
+    object-fit: cover; /* Sikrer, at billedet dækker hele området, muligvis beskæres */
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+   
+}
+
+.petInfo {
+  text-align: center; 
+  padding: 10px; 
+}
+
+.button-spacing > button{
+  margin: 5px;
+}
+.admin-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Juster denne værdi efter behov for at ændre afstanden */
+}
+
+.admin-buttons button {
+  margin-top: 10px; /* Juster denne værdi efter behov for at ændre afstanden mellem knapperne */
+}
+
+/* ViewPets.css */
+
+/* Styles for the orange toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Adjust the width as needed */
+  height: 34px; /* Adjust the height as needed */
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff9100; /* Pumpkin orange */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px; /* Adjust the height of the slider button */
+  width: 26px; /* Adjust the width of the slider button */
+  left: 4px;
+  bottom: 4px;
+  background-color: #4c573b91;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00ff22; /* Pumpkin orange when checked */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.Italic{
+  font-style: italic;
+}
+
+/* Styles for the orange toggle switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Adjust the width as needed */
+  height: 34px; /* Adjust the height as needed */
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff9100; /* Pumpkin orange */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px; /* Adjust the height of the slider button */
+  width: 26px; /* Adjust the width of the slider button */
+  left: 4px;
+  bottom: 4px;
+  background-color: #4c573b91;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00ff22; /* Pumpkin orange when checked */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.toggle-available-button {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-available-button.available {
+  background-color: green;
+}
+
+.toggle-available-button.not-available {
+  background-color: red;
+}
+
+/* 
+Flex  */
+/* den her gør */
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  border: 1px solid #491af3;
+  padding: 10px;
+  align-content: space-between;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(33, 190, 16);
+  border: 1px solid #1206fc;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.flex-container2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; 
+  border: 1px solid #ecf004;
+  padding: 10px;
+  align-content: space-between;
+  flex-direction: column;
+}
+.item2 {
+  width: 570px;
+  height: 100px;
+  background-color: rgb(230, 3, 11);
+  border: 1px solid #07f6ea;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+
+.flex-container3 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse; 
+  border: 1px solid #cf3e05;
+  padding: 10px;
+  align-content: space-between;
+  flex-direction: row;
+
+}
+.item3 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(67, 6, 209);
+  border: 1px solid #09e623;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+
+/* 
+Grid  */
+
+
+.grid-container {
+  background-color: rgba(25, 217, 11, 0.8);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 5px;
+  border: 3px solid #ddd;
+
+
+}
+
+.grid-item {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  font-size: 30px;
+  
+  
+}
+
+
+.grid-item1 { grid-area: header; }
+.grid-item2 { grid-area: menu; }
+.grid-item3 { grid-area: main; }
+.grid-item4 { grid-area: right; }
+.grid-item5 { grid-area: footer; }
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #4b21f3;
+  padding: 10px;
+}
+
+.grid-container2 > div {
+  background-color: rgba(245, 10, 10, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 80px 200px;
+  gap: 10px;
+  background-color: #b203da;
+  padding: 10px;
+}
+
+.grid-container3 > div {
+  background-color: rgba(10, 58, 234, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

@@ -1,0 +1,23 @@
+/* <!-
+Felxbox- er en en-dimensionel layoutmodel, der kan tilbyde fleksibilitet i en enkelt dimension - række eller kolonne. -->
+Grid: Velegnet til komplekse, to-dimensionelle layoutbehov, nøjagtig positionering og mere avancerede layoutstrukturer. -->
+Grid- er en to-dimensionel layoutmodel, der kan tilbyde kontrol over både rækker og kolonner.
+ */
+
+
+ .flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+ }
+
+    /* 6 typer af flexbox properties */
+    flex-direction  /*row, row-reverse, column, column-reverse  */
+    flex-wrap      /*wrap, nowrap, wrap-reverse */
+    flex-flow     /*row wrap */
+    justify-content /*flex-start, flex-end, center, space-between, space-around, space-evenly */
+    align-items /*stretch, flex-start, flex-end, center, baseline */
+    align-content /*stretch, flex-start, flex-end, center, space-between, space-around */
+
+  
